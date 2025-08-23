@@ -163,7 +163,7 @@ def calculate_and_generate():
     total = sum(expense_dict.values())
     print_to_gui(f"Total Expenses: ${total:.2f}")
     print_to_gui(f"Splitting between {people} people.")
-    print_to_gui(f"Each person owes: ${total / people:.2f}")
+    print_to_gui(f"Each person owes: ${(total / people):.2f}")
     pdf_filename = generate_pdf(expense_dict, total, people)
     if pdf_filename:
         print_to_gui(f"PDF report generated: {pdf_filename}")
